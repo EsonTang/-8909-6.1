@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="actionModeTitleBarColor">#f6be1a</color>
+    <color name="editStatusBarColorCode">#C9CFD3</color>
+    <color name="editTitleBackgroundColor">#eceff1</color>
+    <color name="editTitleTextColor">#dd000000</color>
+    <color name="emptySloganTextColor">#bdbdbd</color>
+    <color name="listSelctorColor">#A4A4A4</color>
+    <color name="listviewDividerColor">#1E000000</color>
+    <color name="pagebackgroundColor">#fafafa</color>
+    <color name="selectedStatusBarColorCode">#C6CACD</color>
+    <color name="statusBarColorCode">#E6B111</color>
+    <color name="titlebackgroundcolor">#f6be1a</color>
+    <dimen name="add_icon_width">80dp</dimen>
+    <dimen name="list_item_height">48dp</dimen>
+    <string name="app_name">NotePad</string>
+    <string name="button_ok">OK</string>
+    <string name="confirm_delete_notes">notes will be deleted.</string>
+    <string name="confirm_delete_notes_single">note will be deleted.</string>
+    <string name="content_full">The content reaches the length limitation now!</string>
+    <string name="emptyNotesText">Notes you add appear here</string>
+    <string name="error_message">Error loading note</string>
+    <string name="error_title">Error</string>
+    <string name="live_folder_name">Notes</string>
+    <string name="menu_add">New note</string>
+    <string name="menu_copy">Copy</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_delete_all">Delete all</string>
+    <string name="menu_delete_sel">Select ...</string>
+    <string name="menu_delete_selected">selected</string>
+    <string name="menu_deselect_all">Deselect all</string>
+    <string name="menu_open">Open</string>
+    <string name="menu_paste">Paste</string>
+    <string name="menu_revert">Revert changes</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_select_all">Select all</string>
+    <string name="msg_all">All</string>
+    <string name="msg_this">This</string>
+    <string name="nothing_to_save">There is nothing to save</string>
+    <string name="resolve_edit">Edit note</string>
+    <string name="resolve_title">Edit title</string>
+    <string name="text_title">Title:</string>
+    <string name="title_create">New note</string>
+    <string name="title_edit">Edit: %1$s</string>
+    <string name="title_edit_title">Note title:</string>
+    <string name="title_notes_list">Notes</string>
+    <style name="ActionButtonStyle" parent="@android:style/Widget.Material.Light.ActionButton">
+        <item name="android:minWidth">0dip</item>
+        <item name="android:paddingStart">14dip</item>
+        <item name="android:paddingEnd">14dip</item>
+    </style>
+    <style name="AppBaseTheme" parent="android:Theme.Holo">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="EditTheme" parent="@android:style/Theme.Material.Light">
+        <item name="android:actionBarStyle">@style/MyEditActionBar</item>
+        <!-- <item name="android:actionButtonStyle">@style/ActionButtonStyle</item> -->
+        <item name="android:actionBarSize">64dp</item>
+        <item name="android:statusBarColor">@color/editStatusBarColorCode</item>
+    </style>
+    <style name="MyActionBar" parent="@android:style/Widget.Material.Light.ActionBar.Solid">
+        <item name="android:background">@color/titlebackgroundcolor</item>
+        <item name="android:titleTextStyle">@style/ThemeTitle</item>
+    </style>
+    <style name="MyEditActionBar" parent="@android:style/Widget.Material.Light.ActionBar.Solid">
+        <item name="android:background">@color/editTitleBackgroundColor</item>
+        <item name="android:titleTextStyle">@style/editThemeTitle</item>
+    </style>
+    <style name="OverflowActionMode" parent="@android:style/Widget.Material.ActionButton.Overflow">
+        <item name="android:src">@drawable/overflow_vector</item>
+        <item name="android:minWidth">0dip</item>
+        <item name="android:paddingStart">8dip</item>
+        <item name="android:paddingEnd">10dip</item>
+    </style>
+    <style name="StartTheme" parent="@android:style/Theme.Material.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionModeBackground">@color/actionModeTitleBarColor</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverflowActionMode</item>
+        <item name="android:actionButtonStyle">@style/ActionButtonStyle</item>
+        <item name="android:actionBarSize">64dp</item>
+        <item name="android:statusBarColor">@color/statusBarColorCode</item>
+    </style>
+    <style name="ThemeTitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="editThemeTitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/editTitleTextColor</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>

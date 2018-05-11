@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (c) 2015 Qualcomm Technologies, Inc.
+     All Rights Reserved.
+     Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<resources>
+    <dimen name="add_icon_width">80dp</dimen>
+    <dimen name="list_item_height">48dp</dimen>
+</resources>
