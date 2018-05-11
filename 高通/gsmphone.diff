@@ -1,0 +1,75 @@
+commit fca94cee94594b84f20204207d7a406e5a572c82
+Author: wuyinsheng <wuyinsheng@viroyal-elec.com>
+Date:   Wed Nov 16 10:58:27 2016 +0800
+
+    gsmphone.java update
+
+diff --git a/frameworks/opt/telephony/src/java/com/android/internal/telephony/gsm/GSMPhone.java b/frameworks/opt/telephony/src/java/com/android/internal/telephony/gsm/GSMPhone.java
+index 125f5d1..c67beb6 100644
+--- a/frameworks/opt/telephony/src/java/com/android/internal/telephony/gsm/GSMPhone.java
++++ b/frameworks/opt/telephony/src/java/com/android/internal/telephony/gsm/GSMPhone.java
+@@ -128,6 +128,10 @@ public class GSMPhone extends PhoneBase {
+     private String mImei;
+     private String mImeiSv;
+     private String mVmNumber;
++    private String mEsn;
++    private String mMeid;
++
+ 
+     private IsimUiccRecords mIsimUiccRecords;
+ 
+@@ -1097,14 +1101,19 @@ public class GSMPhone extends PhoneBase {
+ 
+     @Override
+     public String getEsn() {
+-        Rlog.e(LOG_TAG, "[GSMPhone] getEsn() is a CDMA method");
+-        return "0";
++//        Rlog.e(LOG_TAG, "[GSMPhone] getEsn() is a CDMA method");
++//        return "0";
++    	return mEsn;
+     }
+ 
+     @Override
+     public String getMeid() {
+-       Rlog.e(LOG_TAG, "[GSMPhone] getMeid() is a CDMA method");
+-       return "0";
++//     Rlog.e(LOG_TAG, "[GSMPhone] getMeid() is a CDMA method");
++//     return "0";
++    	return mMeid;
++
+     }
+ 
+     @Override
+@@ -1574,8 +1583,10 @@ public class GSMPhone extends PhoneBase {
+                 mCi.getBasebandVersion(
+                         obtainMessage(EVENT_GET_BASEBAND_VERSION_DONE));
+ 
+-                mCi.getIMEI(obtainMessage(EVENT_GET_IMEI_DONE));
+-                mCi.getIMEISV(obtainMessage(EVENT_GET_IMEISV_DONE));
++//              mCi.getIMEI(obtainMessage(EVENT_GET_IMEI_DONE));
++//              mCi.getIMEISV(obtainMessage(EVENT_GET_IMEISV_DONE));
++                mCi.getDeviceIdentity(obtainMessage(EVENT_GET_DEVICE_IDENTITY_DONE));
+                 mCi.getRadioCapability(obtainMessage(EVENT_GET_RADIO_CAPABILITY));
+                 startLceAfterRadioIsAvailable();
+             }
+@@ -1587,6 +1598,26 @@ public class GSMPhone extends PhoneBase {
+                 setPreferredNetworkTypeIfSimLoaded();
+                 break;
+
++            case EVENT_GET_DEVICE_IDENTITY_DONE:
++                ar = (AsyncResult)msg.obj;
++				String modemId = null;
++                if (ar.exception != null) {
++                    break;
++                }
++                String[] respId = (String[])ar.result;
++                mImei = respId[0];
++                mImeiSv = respId[1];
++                mEsn  =  respId[2];
++                mMeid =  respId[3];
++	
++            break;
++            
+             case EVENT_REGISTERED_TO_NETWORK:
+                 syncClirSetting();
+                 break;

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (c) 2009, The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources>
+    <bool name="def_dim_screen">true</bool>//自动关屏 开
+<integer name="def_screen_off_timeout">15000</integer>//自动关闭屏幕时间 15秒
+<integer name="def_sleep_timeout">-1</integer>//表示休眠时间，默认如果没有修改的是6000，即6000ms的意思，6s进行休眠，在这里将其改为-1就是让其永远不休眠
+<bool name="def_airplane_mode_on">false</bool>//飞行模式 关
+<bool name="def_theater_mode_on">false</bool> //电影院模式 关
+<!-- Comma-separated list of bluetooth, wifi, and cell. -->
+<string name="def_airplane_mode_radios" translatable="false">cell,bluetooth,wifi,nfc,wimax</string> //在飞行模式下禁用的功能列表，用逗号分开
+<string name="airplane_mode_toggleable_radios" translatable="false">bluetooth,wifi,nfc</string> //在飞行模式下禁用的功能列表中能手动开启的功能列表，用逗号分开
+<bool name="def_auto_time">true</bool> //自动适应时间 开
+<bool name="def_auto_time_zone">true</bool> //使用24小时格式 开
+<bool name="def_accelerometer_rotation">false</bool> //自动旋转 关
+<!-- Default screen brightness, from 0 to 255. 102 is 40%. -->
+<integer name="def_screen_brightness">102</integer>//默认屏幕亮度
+<bool name="def_screen_brightness_automatic_mode">false</bool>//屏幕亮度自适应 关
+<fraction name="def_window_animation_scale">100%</fraction> //常规窗口动画的百分比值，为0时禁止窗口动画
+<fraction name="def_window_transition_scale">100%</fraction>//activity过度窗口动画的百分比值，为0时禁止窗口动画
+<bool name="def_haptic_feedback">false</bool> //触动反馈 关
+
+
+<bool name="def_bluetooth_on">false</bool>//蓝牙 关
+<bool name="def_wifi_display_on">false</bool>//Wifi是否开启显示 关
+<bool name="def_install_non_market_apps">true</bool> //安装非市场APK 开
+<bool name="def_package_verifier_enable">true</bool> //验证应用 开
+<!-- Comma-separated list of location providers.
+Network location is off by default because it requires
+user opt-in via Setup Wizard or Settings.-->
+
+<string name="def_location_providers_allowed" translatable="false"></string> //位置信息访问权限 关
+<bool name="assisted_gps_enabled">false</bool> //GPS定位 关
+<bool name="def_netstats_enabled">true</bool> //默认是否开启数据流量 开
+<bool name="def_usb_mass_storage_enabled">true</bool> //是否使用USB大容量存储 开
+<bool name="def_wifi_on">false</bool> //wifi 关
+<!-- 0 == never, 1 == only when plugged in, 2 == always -->
+<integer name="def_wifi_sleep_policy">2</integer> //wifi休眠策略，2-永不修改
+<bool name="def_networks_available_notification_on">true</bool>//当用户使用网络时是否通知 是
+
+
+<bool name="def_backup_enabled">false</bool>//是否启动设备备份 否
+<!--string name="def_backup_transport" translatable="false">android/com.android.internal.backup.LocalTransport</string-->
+<string name="def_backup_transport" translatable="false">com.google.android.backup/.BackupTransportService</string>
+
+
+<!-- Default value for whether or not to pulse the notification LED when there is a
+pending notification -->
+<bool name="def_notification_pulse">true</bool>//当有通知时LED灯是否一直闪烁
+
+
+<bool name="def_mount_play_notification_snd">true</bool>//当有MountService事件时是否播放通知音
+<bool name="def_mount_ums_autostart">false</bool>//ums自动重启 关
+<bool name="def_mount_ums_prompt">true</bool>// ums启用时是否在通知栏提示
+<bool name="def_mount_ums_notify_enabled">true</bool> //ums主机监控时显示在通知栏
+
+
+<!-- user interface sound effects -->
+<integer name="def_power_sounds_enabled">1</integer> //是否播放低电量声音 1--是
+<string name="def_low_battery_sound" translatable="false">/system/media/audio/ui/LowBattery.ogg</string>//低电量声音文件
+<integer name="def_dock_sounds_enabled">0</integer>//插上充电座是否播放声音 0-否
+<string name="def_desk_dock_sound" translatable="false">/system/media/audio/ui/Dock.ogg</string>//插入家用底座时的音频文件的URI
+<string name="def_desk_undock_sound" translatable="false">/system/media/audio/ui/Undock.ogg</string>//拔出家用底座时的音频文件的URI
+<string name="def_car_dock_sound" translatable="false">/system/media/audio/ui/Dock.ogg</string>//插入车载底座时音频文件的URI
+<string name="def_car_undock_sound" translatable="false">/system/media/audio/ui/Undock.ogg</string>//拔出车载底座时音频文件的URI
+<integer name="def_lockscreen_sounds_enabled">0</integer>//锁屏是否播放声音 0--否
+<string name="def_lock_sound" translatable="false">/system/media/audio/ui/Lock.ogg</string>//锁屏声音文件
+<string name="def_unlock_sound" translatable="false">/system/media/audio/ui/Unlock.ogg</string>//解锁声音文件
+<string name="def_trusted_sound" translatable="false">/system/media/audio/ui/Trusted.ogg</string>
+<string name="def_wireless_charging_started_sound" translatable="false">/system/media/audio/ui/WirelessChargingStarted.ogg</string> //开始无线充电音频文件的URI
+
+
+<bool name="def_lockscreen_disabled">true</bool> //是否禁用锁屏
+<bool name="def_device_provisioned">false</bool> //设备是否已提供
+<integer name="def_dock_audio_media_enabled">1</integer>
+
+
+<!-- Notifications use ringer volume -->
+<bool name="def_notifications_use_ring_volume">true</bool> 是否将铃声作为通知铃声使用
+
+
+<!-- Default for Settings.System.VIBRATE_IN_SILENT -->
+<bool name="def_vibrate_in_silent">true</bool>//静音模式是否震动 是
+
+
+<!-- Default for Settings.Secure.ACCESSIBILITY_SCRIPT_INJECTION -->
+<bool name="def_accessibility_script_injection">false</bool> //是否启用javascript注入来增强阅读
+
+
+<!-- Default for Settings.Secure.ACCESSIBILITY_SPEAK_PASSWORD -->
+<bool name="def_accessibility_speak_password">false</bool>// 在可访问模式时是否允许读出密码
+
+
+<!-- Default for Settings.Secure.ACCESSIBILITY_WEB_CONTENT_KEY_BINDINGS -->
+ <string name="def_accessibility_web_content_key_bindings" translatable="false">
+            <!-- DPAD/Trackball UP - traverse previous on current axis and send an event. -->
+            0x13=0x01000100;
+            <!-- DPAD/Trackball DOWN - traverse next on current axis and send an event. -->
+            0x14=0x01010100;
+            <!-- DPAD/Trackball LEFT - traverse previous on the character navigation axis and send event. -->
+            0x15=0x02000001;
+            <!-- DPAD/Trackball RIGHT - traverse next on the character navigation axis end send event. -->
+            0x16=0x02010001;
+            <!-- Alt+DPAD/Trackball UP - go to the top of the document. -->
+            0x200000013=0x02000601;
+            <!-- Alt+DPAD/Trackball DOWN - go to the bottom of the document. -->
+            0x200000014=0x02010601;
+            <!-- Alt+DPAD/Trackball LEFT - transition from an axis to another and sends an event.-->
+            <!-- Axis transitions: 2 -> 1; -->
+            0x200000015=0x03020101;
+            <!-- Alt+DPAD/Trackball RIGHT - transition from an axis to another and sends an event. -->
+            <!-- Axis transitions:  1 -> 2; -->
+            0x200000016=0x03010201;
+            <!-- Alt+g - go to the previous heading and send an event. -->
+            0x200000023=0x02000301;
+            <!-- Alt+h - go to the next heading and send an event. -->
+            0x200000024=0x02010301;
+            <!-- Alt+COMMA - transition to sentence navigation axis and send an event. -->
+            <!-- Axis transitions:  7 -> 2; -->
+            0x200000037=0x03070201;
+            <!-- Alt+PERIOD - transition to default web view behavior axis and send an event. -->
+            <!-- Axis transitions:  0 -> 7; 1 - > 7; 2 -> 7; -->
+            0x200000038=0x03000701:0x03010701:0x03020701;
+    </string>
+
+
+<!-- Default for Settings.Secure.ACCESSIBILITY_SCRIPT_INJECTION_URL -->
+<string name="def_accessibility_screen_reader_url" translatable="false">
+https://ssl.gstatic.com/accessibility/javascript/android/AndroidVox_v1.js
+</string> //WebView用来展示基本阅读的JavaScript的URL
+
+
+<!-- Default for Settings.Secure.TOUCH_EXPLORATION_ENABLED -->
+<bool name="def_touch_exploration_enabled">false</bool> //是否启用触控探测 否
+
+
+<!-- Default value for Settings.Secure.ACCESSIBILITY_DISPLAY_MAGNIFICATION_SCALE -->
+<fraction name="def_accessibility_display_magnification_scale">200%</fraction> //设置显示放大的百分比
+
+
+<!-- Default value for Settings.Secure.ACCESSIBILITY_DISPLAY_MAGNIFICATION_ENABLED -->
+<bool name="def_accessibility_display_magnification_enabled">false</bool> //是否启用可设置放大屏幕显示比例 否
+
+
+<!-- Default value for Settings.Secure.ACCESSIBILITY_DISPLAY_MAGNIFICATION_AUTO_UPDATE -->
+<bool name="def_accessibility_display_magnification_auto_update">true</bool>//是否允许屏幕放大比例自动更新 是
+
+
+<!-- Default for Settings.System.USER_ROTATION -->
+<integer name="def_user_rotation">0</integer>//屏幕旋转策略，默认启用旋转 0--否
+
+
+<!-- Default for Settings.Secure.DOWNLOAD_MAX_BYTES_OVER_MOBILE. <=0 if no limit -->
+<integer name="def_download_manager_max_bytes_over_mobile">-1</integer> //下载时的最大速度，以字节为单位 -1-不限制
+<!-- Default for Settings.Secure.DOWNLOAD_RECOMMENDED_MAX_BYTES_OVER_MOBILE. <=0 if no limit -->
+<integer name="def_download_manager_recommended_max_bytes_over_mobile">-1</integer> //下载时推荐的最大速度，以字节为单位 -1-不限制
+
+
+<!-- Default for Settings.Secure.LONG_PRESS_TIMEOUT_MILLIS -->
+<integer name="def_long_press_timeout_millis">500</integer>//设置长按失效时长 500毫秒
+
+
+<!-- Default for Settings.System.POINTER_SPEED -->
+<integer name="def_pointer_speed">0</integer> //屏幕是否可以旋转 否
+
+
+<!-- Default for DTMF tones enabled -->
+<bool name="def_dtmf_tones_enabled">true</bool> //在拨号时拨号器是否启用DTMF音调 是
+<!-- M: Default for UI touch sounds disabled ,google defaulit is enable -->
+<bool name="def_sound_effects_enabled">false</bool> //否启用触屏解锁等音效反馈
+
+
+<!-- Development settings -->
+<bool name="def_stay_on_while_plugged_in">false</bool> //当充电时，是否保持唤醒状态 否
+
+
+<!-- Number of retries for connecting to DHCP.
+Value here is the same as WifiStateMachine.DEFAULT_MAX_DHCP_RETRIES -->
+<integer name="def_max_dhcp_retries">9</integer> //最大重连次数
+
+
+<!-- Default for Settings.Secure.USER_SETUP_COMPLETE -->
+<bool name="def_user_setup_complete">false</bool> 当前用户是否已经通过安装向导设置 否
+
+
+<!-- Default for Settings.Global.LOW_BATTERY_SOUND_TIMEOUT.
+0 means no timeout; battery sounds will always play
+>0 is milliseconds of screen-off time after which battery sounds will not play -->
+<integer name="def_low_battery_sound_timeout">0</integer>//低电量声音在屏幕关闭后是否超时播放 0-代表超时毫秒
+
+
+<!-- Initial value for the Settings.Secure.IMMERSIVE_MODE_CONFIRMATIONS setting,
+which is a comma separated list of packages that no longer need confirmation
+for immersive mode.
+Override to disable immersive mode confirmation for certain packages. -->
+<string name="def_immersive_mode_confirmations" translatable="false"></string>是否需要沉浸式模式
+
+
+<!-- Default for Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE -->
+<integer name="def_wifi_scan_always_available">0</integer>//Wifi 是否一致扫描
+
+
+<!-- Default for Settings.Secure.LOCK_SCREEN_SHOW_NOTIFICATIONS, 1==on -->
+<integer name="def_lock_screen_show_notifications">1</integer>//锁屏界面上展示通知
+
+
+<!-- Default for Settings.Secure.LOCK_SCREEN_ALLOW_PRIVATE_NOTIFICATIONS -->
+<bool name="def_lock_screen_allow_private_notifications">true</bool> //锁屏界面是否一直展示通知
+
+
+<!-- Default for Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, 1==on -->
+<integer name="def_heads_up_enabled">1</integer>
+
+
+<!-- Default for Settings.Global.DEVICE_NAME $1=MANUFACTURER $2=MODEL-->
+<string name="def_device_name">%1$s %2$s</string>//设置多个设备名称
+
+
+<!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
+<string name="def_device_name_simple">%1$s</string>//设置单个设备名称
+
+
+<!-- Default for Settings.Secure.WAKE_GESTURE_ENABLED -->
+<bool name="def_wake_gesture_enabled">true</bool>//手势唤醒是否可用
+
+
+<!-- Default for Settings.Global.GUEST_USER_ENABLED -->
+<bool name="def_guest_user_enabled">true</bool>//手势是否可以使用
+
+<!-- Default state of tap to wake -->
+    <bool name="def_double_tap_to_wake">true</bool>//锁屏双击点亮屏幕(需要硬件和驱动支持)
+
+    <!-- Default for Settings.Secure.NFC_PAYMENT_COMPONENT -->
+    <string name="def_nfc_payment_component"></string>//nfc支付
+
+    <!--
+         Default Input Method, its value is from inputmethod's package name and main class name
+              such as "com.android.inputmethod.pinyin/.PinyinIME"
+    -->
+    <string name="def_input_method" translatable="false"></string>//默认输入法
+
+    <!--
+        Default Enable InputMethods, its value is from inputmethod's package name and main class
+        name such as "com.android.inputmethod.pinyin/.PinyinIME" ;This is a string
+        containing the IDs of all enabled input methods, each ID separated by ':'.
+    -->
+    <string name="def_enable_input_methods" translatable="false"></string>//默认输入法
+
+    <!-- custom system sound or not -->
+    <bool name="def_custom_sys_volume">false</bool>//如果为true，就会走下面默认声音大小
+
+    <!-- Ringtone Volume,its value is from 0 to 7,default value is 5 -->
+    <integer name="def_ringtone_volume" translatable="false">5</integer>//需要上面为true
+
+    <!-- Music Volume,its value is from 0 to 15,default value is 11 -->
+    <integer name="def_music_volume" translatable="false">11</integer>//需要上面为true
+
+    <!-- Voice Call Volume,its value is from 0 to 5,default value is 4 -->
+    <integer name="def_voice_call_volume" translatable="false">4</integer>//需要上面为true
+
+    <!-- Alarm Volume,its value is from 0 to 7,default value is 6 -->
+    <integer name="def_alarm_volume" translatable="false">6</integer>//需要上面为true
+
+    <!-- Notification Volume,its value is from 0 to 7,default value is 5 -->
+    <integer name="def_notification_volume" translatable="false">5</integer>//需要上面为true
+
+    <!-- Ringtone headset Volume,its value is from 0 to 7,default value is 5 -->
+    <integer name="def_ringtone_headset_volume" translatable="false">5</integer>//需要上面为true
+
+    <!-- Music headset Volume,its value is from 0 to 15,default value is 11 -->
+    <integer name="def_music_headset_volume" translatable="false">11</integer>//需要上面为true
+
+    <!-- Voice Call headset Volume,its value is from 0 to 5,default value is 4 -->
+    <integer name="def_voice_call_headset_volume" translatable="false">4</integer>//需要上面为true
+
+    <!-- Alarm headset Volume,its value is from 0 to 7,default value is 6 -->
+    <integer name="def_alarm_headset_volume" translatable="false">6</integer>//需要上面为true
+
+    <!-- Notification headset Volume,its value is from 0 to 7,default value is 5 -->
+    <integer name="def_notification_headset_volume" translatable="false">5</integer>//需要上面为true
+
+    <!-- Ringtone speaker Volume,its value is from 0 to 7,default value is 5 -->
+    <integer name="def_ringtone_speaker_volume" translatable="false">5</integer>//需要上面为true
+
+    <!-- Music speaker Volume,its value is from 0 to 15,default value is 11 -->
+    <integer name="def_music_speaker_volume" translatable="false">11</integer>//需要上面为true
+
+    <!-- Voice Call speaker Volume,its value is from 0 to 5,default value is 4 -->
+    <integer name="def_voice_call_speaker_volume" translatable="false">4</integer>//需要上面为true
+
+    <!-- Alarm speaker Volume,its value is from 0 to 7,default value is 6 -->
+    <integer name="def_alarm_speaker_volume" translatable="false">6</integer>//需要上面为true
+
+    <!-- Notification speaker Volume,its value is from 0 to 7,default value is 5 -->
+    <integer name="def_notification_speaker_volume" translatable="false">5</integer>//需要上面为true
+
+    <!-- Voice Call earpiece Volume,its value is from 0 to 5,default value is 4 -->
+    <integer name="def_voice_call_earpiece_volume" translatable="false">4</integer>//需要上面为true
+
+    <!-- Date format,yyyy-MM-dd: 2013/07/30; MM-dd-yyyy:07/30/2013; dd-MM-yyyy:30/07/2013 -->
+    <string name="def_date_format" translatable="false"></string>//默认日期格式
+
+    <!-- Time format,default value is 24 : 24 format,other value is 12 format -->
+    <string name="def_time_format" translatable="false"></string>//默认时间格式
+
+    <!-- enable accessibility or not,1:enable;0:disable -->
+    <integer name="def_enable_accessibility">0</integer>
+
+    <!-- for enable accessibility services,split by ":" ,
+         example "com.google.android.marvin.talkback/
+         com.google.android.marvin.talkback.TalkBackService" -->
+    <string name="def_enable_accessibility_services" translatable="false"></string>
+</resources>
